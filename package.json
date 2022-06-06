@@ -1,0 +1,22 @@
+{
+  "name": "modal-window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lavet13/modal-window.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lavet13/modal-window/issues"
+  },
+  "homepage": "https://github.com/lavet13/modal-window#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
