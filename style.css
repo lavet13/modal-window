@@ -38,7 +38,7 @@ body {
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
-  color: #333;
+  color: currentColor;
   cursor: pointer;
   border: none;
   background: none;
@@ -55,9 +55,6 @@ p {
 
 /* -------------------------- */
 /* CLASSES TO MAKE MODAL WORK */
-.hidden {
-  display: none;
-}
 
 .modal {
   position: absolute;
@@ -82,4 +79,85 @@ p {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fade-in .2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.fade-out {
+  animation: fade-out .2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+.modal--open {
+  animation: modal--open .2s;
+}
+
+@keyframes modal--open {
+
+  /* from */
+  0% {
+    transform: translate(-50%, -60%) scale(1.05);
+  }
+
+  50% {
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+
+  /* to */
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+.modal--close {
+  animation: modal--close .2s;
+}
+
+@keyframes modal--close {
+
+  /* from */
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+
+  50% {
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+
+  /* to */
+  100% {
+    transform: translate(-50%, -60%) scale(1.05);
+  }
 }
