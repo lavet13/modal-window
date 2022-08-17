@@ -15,36 +15,23 @@ const modal = document.querySelector('.modal'),
 
 const openModal = function () {
   if (modal.classList.contains('hidden')) {
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
+    modal.className = 'modal';
+    overlay.className = 'overlay';
     modal.classList.add('modal--open');
     modal.classList.add('fade-in');
     overlay.classList.add('fade-in');
-    new Promise(resolve =>
-      setTimeout(() => {
-        modal.classList.remove('modal--open');
-        modal.classList.remove('fade-in');
-        overlay.classList.remove('fade-in');
-      }, 200)
-    );
   }
 };
 
 const closeModal = function () {
   if (!modal.classList.contains('hidden')) {
+    modal.className = 'modal';
+    overlay.className = 'overlay';
     modal.classList.add('modal--close');
     modal.classList.add('fade-out');
     overlay.classList.add('fade-out');
-    new Promise(resolve =>
-      setTimeout(() => {
-        modal.classList.remove('modal--close');
-        modal.classList.add('hidden');
-        overlay.classList.add('hidden');
-        modal.classList.remove('fade-out');
-        overlay.classList.remove('fade-out');
-        resolve();
-      }, 150)
-    );
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
   }
 };
 

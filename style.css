@@ -83,12 +83,14 @@ p {
 
 
 .hidden {
+  display: none;
   visibility: hidden;
 }
 
 .fade-in {
   animation: fade-in .2s;
   animation-fill-mode: backwards;
+  opacity: 1;
 }
 
 @keyframes fade-in {
@@ -105,6 +107,7 @@ p {
 .fade-out {
   animation: fade-out .2s;
   animation-fill-mode: backwards;
+  opacity: 0;
 }
 
 @keyframes fade-out {
@@ -119,7 +122,9 @@ p {
 
 
 .modal--open {
-  animation: modal--open .2s;
+  animation: modal--open .5s;
+  animation-fill-mode: backwards;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 @keyframes modal--open {
@@ -141,7 +146,9 @@ p {
 
 
 .modal--close {
-  animation: modal--close .2s;
+  animation: modal--close .5s;
+  animation-fill-mode: backwards;
+  transform: translate(-50%, -60%) scale(1.05);
 }
 
 @keyframes modal--close {
